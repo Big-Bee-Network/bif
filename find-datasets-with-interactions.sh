@@ -7,7 +7,7 @@ VERSION_ANCHOR=${1:-"hash://sha256/37bdd8ddb12df4ee02978ca59b695afd651f94398c0fe
 REMOTES="https://linker.bio"
 
 preston cat --no-cache --remotes "${REMOTES}" ${VERSION_ANCHOR}\
- | grep -P "(application/dwca|hasVersion)"\
+ | grep -E "(application/dwca|hasVersion)"\
  | grep --after 1 "application/dwca"\
  | grep hasVersion\
  | grep -Eo "hash://[a-z0-9]+/[a-f0-9]+"\
