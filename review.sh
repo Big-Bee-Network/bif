@@ -6,10 +6,14 @@
 
 set -x 
 
+DIST_DIR="dist/$(date --iso-8601=seconds)"
+
+mkdir -p "${DIST_DIR}"
+
 ./find-datasets-with-interactions.sh\
  | sort\
  | uniq\
  | tee datasets.json\
  | elton stream --record-type review\
  | gzip\
- > review.tsv.gz
+ > "${DIST_DIR}/review.tsv.gz"
