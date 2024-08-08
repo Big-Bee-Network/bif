@@ -17,3 +17,6 @@ mkdir -p "${DIST_DIR}"
  | elton stream --record-type review\
  | gzip\
  > "${DIST_DIR}/review.tsv.gz"
+
+ln -f -s "${DIST_DIR}/review.tsv.gz" review.tsv.gz
+
