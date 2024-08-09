@@ -1,3 +1,6 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13272096.svg)](https://doi.org/10.5281/zenodo.13272096)
+
+
 # bif
 Biodiversity Interaction Finder - using Preston and Elton to detect bee interactions in existing biodiversity data infrastructures like GBIF/iDigBio/ALA etc. Slight modifications can be done to filter interactions based on any catalog.
 
