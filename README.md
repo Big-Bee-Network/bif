@@ -2,7 +2,7 @@
 
 
 # bif
-Biodiversity Interaction Finder - using Preston and Elton to detect bee interactions in existing biodiversity data infrastructures like GBIF/iDigBio/ALA etc. Slight modifications can be done to filter interactions based on any catalog.
+Biodiversity Interaction Finder (pronounced Bifi) - using Preston and Elton to detect bee interactions in existing biodiversity data infrastructures like GBIF/iDigBio/ALA etc. Slight modifications can be done to filter interactions based on any catalog.
 
 # Methods 
 
