@@ -15,4 +15,4 @@ preston cat --no-cache --remotes "${REMOTES}" ${VERSION_ANCHOR}\
  | grep hasVersion\
  | grep -Eo "hash://[a-z0-9]+/[a-f0-9]+"\
  | sed -E "s/([a-f0-9]+)$/\1\t\1/g"\
- | awk -F '\t' '{ print "{ \"namespace\": \"" $1 "\", \"citation\": \"" $1 "\", \"format\": \"dwca\", \"url\": \"https://linker.bio/" $1 "\" }" }'
+ | awk -F '\t' -v version_anchor="${VERSION_ANCHOR}" '{ print "{ \"namespace\": \"" $1 "\", \"citation\": \"<" $1 "> <http://www.w3.org/ns/prov#wasDerivedFrom> <" version_anchor "> .\", \"format\": \"dwca\", \"url\": \"https://linker.bio/" $1 "\" }" }'
