@@ -17,6 +17,9 @@ preston history\
 
 1. pick a corpus version (e.g., https://linker.bio/hash://sha256/37bdd8ddb12df4ee02978ca59b695afd651f94398c0fe2e1f8b182849a876bb2, see also https://linker.bio)
 
+1a. Find the most recent preston archive given an older one
+--- preston head --anchor hash://sha256/37bdd8ddb12df4ee02978ca59b695afd651f94398c0fe2e1f8b182849a876bb2 --remote https://linker.bio
+
 ```
 preston cat\
  --remote https://zenodo.org/records/7651831/files,https://linker.bio\
