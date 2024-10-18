@@ -7,7 +7,8 @@ VERSION_ANCHOR=${1:-"hash://sha256/37bdd8ddb12df4ee02978ca59b695afd651f94398c0fe
 REMOTES="https://linker.bio"
 
 preston cat --no-cache --remotes "${REMOTES}" ${VERSION_ANCHOR}\
- | grep hasVersion\
+ | grep -E "(application/dwca|hasVersion)"\
+ | grep --after 1 "application/dwca"\
  | preston dwc-stream --no-cache --remote "${REMOTES}"\
  | jq --raw-output '[.["http://rs.tdwg.org/dwc/terms/scientificName"],.["http://www.w3.org/ns/prov#wasDerivedFrom"]] | @tsv'\
  | sed 's/^/\t/g'\
