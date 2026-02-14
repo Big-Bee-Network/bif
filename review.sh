@@ -23,6 +23,7 @@ RECORD_TYPE="review"
 preston cat --remotes "${REMOTES}" ${VERSION_ANCHOR} \
  | elton stream \
  --record-type "${RECORD_TYPE}" \
+ --anchor "${VERSION_ANCHOR}" \
  --data-dir data \
  --prov-dir data \
  --work-dir tmp \
